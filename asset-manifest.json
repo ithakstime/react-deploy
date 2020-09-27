@@ -1,23 +1,36 @@
 {
   "files": {
-    "main.css": "/react-deploy/static/css/main.5f361e03.chunk.css",
-    "main.js": "/react-deploy/static/js/main.3cc887d4.chunk.js",
-    "main.js.map": "/react-deploy/static/js/main.3cc887d4.chunk.js.map",
+    "main.css": "/react-deploy/static/css/main.ae27485c.chunk.css",
+    "main.js": "/react-deploy/static/js/main.4cf0991d.chunk.js",
+    "main.js.map": "/react-deploy/static/js/main.4cf0991d.chunk.js.map",
     "runtime-main.js": "/react-deploy/static/js/runtime-main.3e11c617.js",
     "runtime-main.js.map": "/react-deploy/static/js/runtime-main.3e11c617.js.map",
-    "static/js/2.a0c31166.chunk.js": "/react-deploy/static/js/2.a0c31166.chunk.js",
-    "static/js/2.a0c31166.chunk.js.map": "/react-deploy/static/js/2.a0c31166.chunk.js.map",
+    "static/css/2.cd1c2086.chunk.css": "/react-deploy/static/css/2.cd1c2086.chunk.css",
+    "static/js/2.54131b35.chunk.js": "/react-deploy/static/js/2.54131b35.chunk.js",
+    "static/js/2.54131b35.chunk.js.map": "/react-deploy/static/js/2.54131b35.chunk.js.map",
     "index.html": "/react-deploy/index.html",
-    "precache-manifest.3b29ea451e277845c8ccab66d4c45119.js": "/react-deploy/precache-manifest.3b29ea451e277845c8ccab66d4c45119.js",
+    "precache-manifest.18a6ffdd81442e4e22d40e21ad749b6f.js": "/react-deploy/precache-manifest.18a6ffdd81442e4e22d40e21ad749b6f.js",
     "service-worker.js": "/react-deploy/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/react-deploy/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.a0c31166.chunk.js.LICENSE.txt": "/react-deploy/static/js/2.a0c31166.chunk.js.LICENSE.txt",
-    "static/media/moto.jpg": "/react-deploy/static/media/moto.112efa63.jpg"
+    "static/css/2.cd1c2086.chunk.css.map": "/react-deploy/static/css/2.cd1c2086.chunk.css.map",
+    "static/css/main.ae27485c.chunk.css.map": "/react-deploy/static/css/main.ae27485c.chunk.css.map",
+    "static/js/2.54131b35.chunk.js.LICENSE.txt": "/react-deploy/static/js/2.54131b35.chunk.js.LICENSE.txt",
+    "static/media/agro.webp": "/react-deploy/static/media/agro.72211060.webp",
+    "static/media/automotive.webp": "/react-deploy/static/media/automotive.a7ffd5a3.webp",
+    "static/media/digi.webp": "/react-deploy/static/media/digi.41d8ed4e.webp",
+    "static/media/fuel.webp": "/react-deploy/static/media/fuel.f62ffe64.webp",
+    "static/media/haks.jpg": "/react-deploy/static/media/haks.71974ace.jpg",
+    "static/media/metals.webp": "/react-deploy/static/media/metals.160520f9.webp",
+    "static/media/milkyway.jpg": "/react-deploy/static/media/milkyway.1022bdf9.jpg",
+    "static/media/phone.jpg": "/react-deploy/static/media/phone.3d950c8d.jpg",
+    "static/media/time.jpg": "/react-deploy/static/media/time.901cb8d5.jpg",
+    "static/media/trade.webp": "/react-deploy/static/media/trade.96858dee.webp",
+    "static/media/update.jpg": "/react-deploy/static/media/update.4dec7238.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.3e11c617.js",
-    "static/js/2.a0c31166.chunk.js",
-    "static/css/main.5f361e03.chunk.css",
-    "static/js/main.3cc887d4.chunk.js"
+    "static/css/2.cd1c2086.chunk.css",
+    "static/js/2.54131b35.chunk.js",
+    "static/css/main.ae27485c.chunk.css",
+    "static/js/main.4cf0991d.chunk.js"
   ]
 }
