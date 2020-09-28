@@ -20,10 +20,17 @@ class Contact extends Component {
     this.setState({
       fields,
     });
+
+    console.log("final data is :" + fields);
   }
   submituserInquiryForm(e) {
-    console.log(this.validateForm());
+    console.log("State :" + this.state.fields);
     e.preventDefault();
+    const isValid = this.validateForm();
+
+    if (isValid) {
+      console.log(this.state.fields);
+    }
   }
   validateForm() {
     let fields = this.state.fields;
@@ -91,8 +98,17 @@ class Contact extends Component {
             alt="agro-based"
           />
         </div>
-        <div className="row">
-          <div className="container pt-4">
+
+        <div className="container">
+          <div className="row welcome text-center">
+            <div className="col-md-12">
+              <h1 className="display-4">Contact</h1>
+            </div>
+          </div>
+        </div>
+
+        <div className="container pt-4">
+          <div className="row">
             <div className="col-md-6">
               <h2 class="text-center">Inquire Now</h2>
               <MDBContainer>
@@ -113,7 +129,7 @@ class Contact extends Component {
                         type="text"
                         name="name"
                         id="defaultFormRegisterNameEx"
-                        value={this.state.fields.username}
+                        value={this.state.fields.name}
                         onChange={this.handleChange}
                         className="form-control"
                       />
@@ -151,7 +167,7 @@ class Contact extends Component {
                         onChange={this.handleChange}
                         className="form-control"
                       />
-                      <div className="errorMsg">
+                      <div className="errorMsg" style={{ color: "red" }}>
                         {this.state.errors.country}
                       </div>
                       <label
@@ -194,9 +210,11 @@ class Contact extends Component {
                       >
                         Inquiry
                       </label>
-                      <input
+                      <textarea
                         type="text"
                         name="inquiry"
+                        row={5}
+                        col={30}
                         id="defaultFormRegisterInquiryEx"
                         value={this.state.fields.inquiry}
                         onChange={this.handleChange}
@@ -206,8 +224,8 @@ class Contact extends Component {
                         {this.state.errors.inquiry}
                       </div>
                       <div className="text-center mt-3">
-                        <MDBBtn color="secondary" cols="5" type="submit">
-                          INQUIRE
+                        <MDBBtn color="secondary" type="submit">
+                          SEND
                         </MDBBtn>
                       </div>
                     </form>
@@ -215,13 +233,8 @@ class Contact extends Component {
                 </MDBRow>
               </MDBContainer>
             </div>
-            <div className="col-md-6">
-              <img
-                src={haks}
-                alt="haks"
-                className="img-responsive"
-                width="80%"
-              />
+            <div className="col-md-6 pt-4">
+              <img src={haks} alt="haks" className="img-fluid" />
               <div className="col-md-6 wrapper">
                 <a
                   href="http://g.page/haksinterlance"
