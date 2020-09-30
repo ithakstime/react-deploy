@@ -2,17 +2,53 @@ import React, { Component } from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn } from "mdbreact";
 import phone from "../img/phone.jpg";
 import haks from "../img/haks.jpg";
+import axios from "axios";
+import Swal from "sweetalert2";
 
 class Contact extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      fields: {},
+      fields: {
+        name: "",
+        emailid: "",
+        country: "",
+        mobileno: "",
+        company: "",
+        inquiry: "",
+      },
       errors: {},
     };
+    this.inputNameRef = React.createRef();
+    this.inputEmailRef = React.createRef();
+    this.inputCountryRef = React.createRef();
+    this.inputMobilenoRef = React.createRef();
+    this.inputCompanyRef = React.createRef();
+    this.inputInquiryRef = React.createRef();
     this.handleChange = this.handleChange.bind(this);
     this.submituserInquiryForm = this.submituserInquiryForm.bind(this);
   }
+
+  handleInputNameFocus(e) {
+    this.inputNameRef.current.focus();
+  }
+  handleInputEmailFocus(e) {
+    this.inputEmailRef.current.focus();
+  }
+  handleInputCountryFocus(e) {
+    this.inputCountryRef.current.focus();
+  }
+  handleInputMobilenoFocus(e) {
+    this.inputMobilenoRef.current.focus();
+  }
+  handleInputCompanyFocus(e) {
+    this.inputCompanyRef.current.focus();
+  }
+  handleInputInquiryFocus(e) {
+    this.inputInquiryRef.current.focus();
+  }
+  handleButtonClick = (event) => {};
 
   handleChange(e) {
     let fields = this.state.fields;
@@ -21,16 +57,30 @@ class Contact extends Component {
       fields,
     });
 
-    console.log("final data is :" + fields);
+    console.log("final data is :" + e.target.value);
   }
   submituserInquiryForm(e) {
-    console.log("State :" + this.state.fields);
+    console.log("State :" + e.target.value);
     e.preventDefault();
     const isValid = this.validateForm();
 
     if (isValid) {
       console.log(this.state.fields);
     }
+    var formData = {
+      name: this.state.fields.name,
+      emailid: this.state.fields.emailid,
+      country: this.state.fields.country,
+      mobileno: this.state.fields.mobileno,
+      company: this.state.fields.company,
+      inquiry: this.state.fields.inquiry,
+    };
+    console.log(formData);
+    axios
+      .post("/hakstime", formData)
+      .then(Swal.fire("Inquiry sent successfully!"));
+
+    window.location.reload();
   }
   validateForm() {
     let fields = this.state.fields;
@@ -40,16 +90,19 @@ class Contact extends Component {
     if (!fields["name"]) {
       formIsValid = false;
       errors["name"] = "*Please enter your name.";
+      this.handleInputNameFocus();
     }
     if (typeof fields["name"] !== "undefined") {
       if (!fields["name"].match(/^[a-zA-Z]*$/)) {
         formIsValid = false;
         errors["name"] = "*Please enter alphabet characters only.";
+        this.handleInputNameFocus();
       }
     }
     if (!fields["emailid"]) {
       formIsValid = false;
       errors["emailid"] = "*Please enter your email-ID.";
+      this.handleInputEmailFocus();
     }
     if (typeof fields["emailid"] !== "undefined") {
       var pattern = new RegExp(
@@ -58,30 +111,36 @@ class Contact extends Component {
       if (!pattern.test(fields["emailid"])) {
         formIsValid = false;
         errors["emailid"] = "*Please enter valid email-ID.";
+        this.handleInputEmailFocus();
       }
     }
     if (!fields["country"]) {
       formIsValid = false;
       errors["country"] = "*Please enter your country.";
+      this.handleInputCountryFocus();
     }
     if (!fields["mobileno"]) {
       formIsValid = false;
       errors["mobileno"] = "*Please enter your mobile no.";
+      this.handleInputMobilenoFocus();
     }
     if (typeof fields["mobileno"] !== "undefined") {
       if (!fields["mobileno"].match(/^[0-9]/)) {
         formIsValid = false;
         errors["mobileno"] = "*Please enter valid mobile no.";
+        this.handleInputMobilenoFocus();
       }
     }
     if (!fields["company"]) {
       formIsValid = false;
       errors["company"] = "*Please enter your company.";
+      this.handleInputCompanyFocus();
     }
 
     if (!fields["inquiry"]) {
       formIsValid = false;
       errors["inquiry"] = "*Please enter your inquiry.";
+      this.handleInputInquiryFocus();
     }
     this.setState({
       errors: errors,
@@ -104,6 +163,7 @@ class Contact extends Component {
             <div className="col-md-12">
               <h1 className="display-4">Contact</h1>
             </div>
+            <hr />
           </div>
         </div>
 
@@ -129,11 +189,12 @@ class Contact extends Component {
                         type="text"
                         name="name"
                         id="defaultFormRegisterNameEx"
+                        ref={this.inputNameRef}
                         value={this.state.fields.name}
                         onChange={this.handleChange}
                         className="form-control"
                       />
-                      <div className="errorMsg">
+                      <div className="errorMsg" style={{ color: "red" }}>
                         {this.state.errors.username}
                       </div>
                       <label
@@ -146,11 +207,12 @@ class Contact extends Component {
                         type="text"
                         name="emailid"
                         id="defaultFormRegisterEmailEx"
+                        ref={this.inputEmailRef}
                         value={this.state.fields.emailid}
                         onChange={this.handleChange}
                         className="form-control"
                       />
-                      <div className="errorMsg">
+                      <div className="errorMsg" style={{ color: "red" }}>
                         {this.state.errors.emailid}
                       </div>
                       <label
@@ -163,6 +225,7 @@ class Contact extends Component {
                         type="text"
                         name="country"
                         id="defaultFormRegisterCountryEx"
+                        ref={this.inputCountryRef}
                         value={this.state.fields.country}
                         onChange={this.handleChange}
                         className="form-control"
@@ -180,11 +243,12 @@ class Contact extends Component {
                         type="text"
                         name="mobileno"
                         id="defaultFormRegisterMobileNoEx"
+                        ref={this.inputMobilenoRef}
                         value={this.state.fields.mobileno}
                         onChange={this.handleChange}
                         className="form-control"
                       />
-                      <div className="errorMsg">
+                      <div className="errorMsg" style={{ color: "red" }}>
                         {this.state.errors.mobileno}
                       </div>
                       <label
@@ -197,11 +261,12 @@ class Contact extends Component {
                         type="text"
                         name="company"
                         id="defaultFormRegisterCompanyEx"
+                        ref={this.inputCompanyRef}
                         value={this.state.fields.company}
                         onChange={this.handleChange}
                         className="form-control"
                       />
-                      <div className="errorMsg">
+                      <div className="errorMsg" style={{ color: "red" }}>
                         {this.state.errors.company}
                       </div>
                       <label
@@ -216,11 +281,12 @@ class Contact extends Component {
                         row={5}
                         col={30}
                         id="defaultFormRegisterInquiryEx"
+                        ref={this.inputInquiryRef}
                         value={this.state.fields.inquiry}
                         onChange={this.handleChange}
                         className="form-control"
                       />
-                      <div className="errorMsg">
+                      <div className="errorMsg" style={{ color: "red" }}>
                         {this.state.errors.inquiry}
                       </div>
                       <div className="text-center mt-3">
