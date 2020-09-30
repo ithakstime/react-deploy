@@ -78,9 +78,8 @@ class Contact extends Component {
     console.log(formData);
     axios
       .post("/hakstime", formData)
-      .then(Swal.fire("Inquiry sent successfully!"));
-
-    window.location.reload();
+      .then(Swal.fire("Inquiry sent successfully!"))
+      .then(window.location.reload());
   }
   validateForm() {
     let fields = this.state.fields;

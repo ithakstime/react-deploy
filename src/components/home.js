@@ -7,7 +7,7 @@ import digi from "../img/digi.webp";
 import fuel from "../img/fuel.webp";
 import metals from "../img/metals.webp";
 import trade from "../img/trade.webp";
-import contact from "./contact";
+import contact from "../components/contact";
 
 class Home extends Component {
   render() {
@@ -43,7 +43,7 @@ class Home extends Component {
               <p className="lead mx-auto">Time Waits for none!</p>
               <p>
                 <a
-                  href={contact}
+                  href="https://ithakstime.github.io/react-deploy/#/contact"
                   type="button"
                   className="btn btn-dark"
                   aria-hidden="true"

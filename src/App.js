@@ -12,13 +12,14 @@ class App extends Component {
           <Header
             className="header-bg"
             title={
-              <span>
+              <span style={{ fontSize: "15px" }}>
                 <strong>
-                  <span style={{ color: "#ffffff" }}>
+                  <span style={{ color: "#ffffff", fontSize: "20px" }}>
                     HAKStime&nbsp;-&nbsp;
                   </span>
                 </strong>
-                Sales & Marketing | Commodity Trading | Consultancy
+                Sales & Marketing | <br />
+                Commodity Trading | Consultancy
               </span>
             }
             scroll
@@ -33,7 +34,7 @@ class App extends Component {
           </Header>
           <Drawer
             title={
-              <span>
+              <span style={{ fontSize: "15px" }}>
                 <strong>
                   <span style={{ color: "#000000" }}>
                     HAKStime&nbsp;-&nbsp;
