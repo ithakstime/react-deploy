@@ -27,7 +27,7 @@ class App extends Component {
             <Navigation>
               <Link to="/">Home</Link>
               <Link to="/products">Products</Link>
-              <Link to="/googleFormSend">Contact</Link>
+              <Link to="/send">Contact</Link>
               <Link to="/post">Posts</Link>
             </Navigation>
           </Header>
@@ -47,7 +47,7 @@ class App extends Component {
             <Navigation>
               <Link to="/">Home</Link>
               <Link to="/products">Products</Link>
-              <Link to="/googleFormSend">Contact</Link>
+              <Link to="/send">Contact</Link>
               <Link to="/post">Posts</Link>
             </Navigation>
           </Drawer>

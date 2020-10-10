@@ -68,7 +68,9 @@ class GoogleFormSend extends Component {
   submituserInquiryForm(e) {
     console.log("State :" + e.target.value);
     e.preventDefault();
-    this.validateForm();
+
+    try{
+      this.validateForm();
     
       var formData = {
         name: this.state.fields.name,
@@ -85,8 +87,12 @@ class GoogleFormSend extends Component {
       form.addField('entry.1602135448',formData.company);
       form.addField('entry.2068787174',  formData.inquiry);
       form.send();
-      Swal.fire("Inquiry sent Successfully!");
+    } catch{
+      window.location.reload();
     }
+    
+    }
+    
   validateForm() {
     let fields = this.state.fields;
     let errors = {};
@@ -95,57 +101,48 @@ class GoogleFormSend extends Component {
     if (!fields["name"]) {
       formIsValid = false;
       errors["name"] = "*Please enter your name.";
-      this.handleInputNameFocus();
     }
     if (typeof fields["name"] !== "undefined") {
       if (!fields["name"].match(/^[a-zA-Z]*$/)) {
         formIsValid = false;
         errors["name"] = "*Please enter alphabet characters only.";
-        this.handleInputNameFocus();
       }
     }
     if (!fields["emailid"]) {
       formIsValid = false;
       errors["emailid"] = "*Please enter your email-ID.";
-      this.handleInputEmailFocus();
     }
     if (typeof fields["emailid"] !== "undefined") {
       var pattern = new RegExp(
-        /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i
+        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
       );
       if (!pattern.test(fields["emailid"])) {
         formIsValid = false;
         errors["emailid"] = "*Please enter valid email-ID.";
-        this.handleInputEmailFocus();
       }
     }
     if (!fields["country"]) {
       formIsValid = false;
       errors["country"] = "*Please enter your country.";
-      this.handleInputCountryFocus();
     }
     if (!fields["mobileno"]) {
       formIsValid = false;
       errors["mobileno"] = "*Please enter your mobile no.";
-      this.handleInputMobilenoFocus();
     }
     if (typeof fields["mobileno"] !== "undefined") {
       if (!fields["mobileno"].match(/^[0-9]/)) {
         formIsValid = false;
         errors["mobileno"] = "*Please enter valid mobile no.";
-        this.handleInputMobilenoFocus();
       }
     }
     if (!fields["company"]) {
       formIsValid = false;
       errors["company"] = "*Please enter your company.";
-      this.handleInputCompanyFocus();
     }
 
     if (!fields["inquiry"]) {
       formIsValid = false;
       errors["inquiry"] = "*Please enter your inquiry.";
-      this.handleInputInquiryFocus();
     }
     this.setState({
       errors: errors,
