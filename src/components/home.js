@@ -7,11 +7,14 @@ import digi from "../img/digi.webp";
 import fuel from "../img/fuel.webp";
 import metals from "../img/metals.webp";
 import trade from "../img/trade.webp";
-import Footer from "./footer";
+import Footer from "./footer"
+import Draw from "./drawer";
+
 class Home extends Component {
   render() {
     return (
       <div>
+        <Draw/>
         <div className="container-fluid px-0 ">
           <img
             src={hakstimeBg}

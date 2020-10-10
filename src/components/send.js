@@ -2,14 +2,11 @@ import React, { Component } from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn } from "mdbreact";
 import phone from "../img/phone.jpg";
 import haks from "../img/haks.jpg";
-import Swal from "sweetalert2";
 import GoogleForm from 'google-form-send';
 import Footer from "./footer";
+import Draw from "./drawer";
 
 var form = new GoogleForm('https://docs.google.com/forms/d/e/1FAIpQLSfqIJGLOakrqak1od66bUHwpY7Ftn9YJVMTMTi021LUziofYw');
-
-var cors= "https://cors-anywhere.herokuapp.com/";
-
 
 class GoogleFormSend extends Component {
   constructor(props) {
@@ -80,7 +77,7 @@ class GoogleFormSend extends Component {
         company: this.state.fields.company,
         inquiry: this.state.fields.inquiry,
       };
-      form.addField('entry.1442417937',  formData.name);
+      form.addField('entry.1442417937', formData.name);
       form.addField('entry.578512623', formData.emailid);
       form.addField('entry.1141971151', formData.country);
       form.addField('entry.1480016484', formData.mobileno);
@@ -88,9 +85,10 @@ class GoogleFormSend extends Component {
       form.addField('entry.2068787174',  formData.inquiry);
       form.send();
     } catch{
+      this.validateForm();
+    } finally{
       window.location.reload();
     }
-    
     }
     
   validateForm() {
@@ -152,6 +150,7 @@ class GoogleFormSend extends Component {
   render() {
     return (
       <div>
+        <Draw/>
         <div className="container-fluid px-0 ">
           <img
             src={phone}

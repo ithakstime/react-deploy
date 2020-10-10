@@ -2,11 +2,13 @@ import React, { Component } from "react";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 import Footer from "./footer";
 import update from "../img/update.jpg";
+import Draw from "./drawer";
 
 class Post extends Component {
   render() {
     return (
       <div>
+        <Draw/>
         <div className="container-fluid px-0 ">
           <img
             src={update}

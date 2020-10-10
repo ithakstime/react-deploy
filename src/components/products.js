@@ -11,11 +11,13 @@ import honda from "../img/honda.png";
 import hyundai from "../img/hyundai.png";
 import kiamotor from "../img/kiamotor.png";
 import Footer from "./footer";
+import Draw from "./drawer";
 
 class Products extends Component {
   render() {
     return (
       <div>
+        <Draw/>
         <div className="container-fluid px-0 ">
           <img
             src={moto}

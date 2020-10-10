@@ -5,7 +5,6 @@ import Products from "./products";
 import Contact from "./contact";
 import Home from "./home";
 import Post from "./post";
-import ContactFor from "./google";
 import GoogleFormSend from "./send";
 
 const Main = () => (
@@ -14,7 +13,6 @@ const Main = () => (
     <Route path="/products" component={Products} />
     <Route path="/contact" component={Contact} />
     <Route path="/post" component={Post} />
-    <Route path="/google" component={ContactFor} />
     <Route path="/send" component={GoogleFormSend} />
   </Switch>
 );
