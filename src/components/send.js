@@ -2,11 +2,16 @@ import React, { Component } from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn } from "mdbreact";
 import phone from "../img/phone.jpg";
 import haks from "../img/haks.jpg";
-import axios from "axios";
 import Swal from "sweetalert2";
+import GoogleForm from 'google-form-send';
 import Footer from "./footer";
 
-class Contact extends Component {
+var form = new GoogleForm('https://docs.google.com/forms/d/e/1FAIpQLSfqIJGLOakrqak1od66bUHwpY7Ftn9YJVMTMTi021LUziofYw');
+
+var cors= "https://cors-anywhere.herokuapp.com/";
+
+
+class GoogleFormSend extends Component {
   constructor(props) {
     super(props);
 
@@ -63,25 +68,25 @@ class Contact extends Component {
   submituserInquiryForm(e) {
     console.log("State :" + e.target.value);
     e.preventDefault();
-    const isValid = this.validateForm();
-
-    if (isValid) {
-      console.log(this.state.fields);
+    this.validateForm();
+    
+      var formData = {
+        name: this.state.fields.name,
+        emailid: this.state.fields.emailid,
+        country: this.state.fields.country,
+        mobileno: this.state.fields.mobileno,
+        company: this.state.fields.company,
+        inquiry: this.state.fields.inquiry,
+      };
+      form.addField('entry.1442417937',  formData.name);
+      form.addField('entry.578512623', formData.emailid);
+      form.addField('entry.1141971151', formData.country);
+      form.addField('entry.1480016484', formData.mobileno);
+      form.addField('entry.1602135448',formData.company);
+      form.addField('entry.2068787174',  formData.inquiry);
+      form.send();
+      Swal.fire("Inquiry sent Successfully!");
     }
-    var formData = {
-      name: this.state.fields.name,
-      emailid: this.state.fields.emailid,
-      country: this.state.fields.country,
-      mobileno: this.state.fields.mobileno,
-      company: this.state.fields.company,
-      inquiry: this.state.fields.inquiry,
-    };
-    console.log(formData);
-    axios
-      .post("/hakstime", formData)
-      .then(Swal.fire("Inquiry sent successfully!"))
-      .then(window.location.reload());
-  }
   validateForm() {
     let fields = this.state.fields;
     let errors = {};
@@ -365,9 +370,10 @@ class Contact extends Component {
             </div>
           </div>
         </div>
-       <Footer/>
+        <Footer/>
       </div>
     );
   }
 }
-export default Contact;
+
+export default GoogleFormSend;

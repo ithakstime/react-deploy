@@ -10,6 +10,7 @@ import ford from "../img/ford.png";
 import honda from "../img/honda.png";
 import hyundai from "../img/hyundai.png";
 import kiamotor from "../img/kiamotor.png";
+import Footer from "./footer";
 
 class Products extends Component {
   render() {
@@ -207,6 +208,7 @@ class Products extends Component {
             </div>
           </div>
         </div>
+        <Footer/>
       </div>
     );
   }
