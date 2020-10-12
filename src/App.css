@@ -238,6 +238,9 @@ hr.light-100 {
   }
 }
 @media (max-width: 576px) {
+  nav.mdl-navigation {
+    display: none;
+  }
   .header-img {
     height: 70vh;
   }

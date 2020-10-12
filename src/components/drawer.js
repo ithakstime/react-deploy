@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 
 class Draw extends Component {
   render(){
-    return <Layout fixedHeader>
+    return ( 
+<Layout fixedHeader>
       <Header
             className="header-bg"
             title={
@@ -25,8 +26,8 @@ class Draw extends Component {
               <Link to="/send">Contact</Link>
               <Link to="/post">Posts</Link>
             </Navigation>
-          </Header>
-    <Drawer className="hide-on-large-only"
+            </Header>
+    <Drawer 
       title={
         <span style={{ fontSize: "15px" }}>
           <strong>
@@ -45,7 +46,9 @@ class Draw extends Component {
         <Link to="/post">Posts</Link>
       </Navigation>
     </Drawer>
-  </Layout>
+    
+  </Layout>);
+   
   }
 
 }

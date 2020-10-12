@@ -20,9 +20,16 @@ class GoogleFormSend extends Component {
         mobileno: "",
         company: "",
         inquiry: "",
+        inputNameRef : React.createRef(),
+        inputEmailRef : React.createRef(),
+        inputCountryRef: React.createRef(),
+        inputMobilenoRef:React.createRef(),
+        inputCompanyRef:React.createRef(),
+        inputInquiryRef:React.createRef(),
       },
       errors: {},
     };
+
     this.inputNameRef = React.createRef();
     this.inputEmailRef = React.createRef();
     this.inputCountryRef = React.createRef();
@@ -34,22 +41,34 @@ class GoogleFormSend extends Component {
   }
 
   handleInputNameFocus(e) {
-    this.inputNameRef.current.focus();
+    this.setState({
+      inputNameRef: this.inputNameRef.current.focus(),
+    })
   }
   handleInputEmailFocus(e) {
-    this.inputEmailRef.current.focus();
+    this.setState({
+      inputEmailRef: this.inputEmailRef.current.focus(),
+    })
   }
   handleInputCountryFocus(e) {
-    this.inputCountryRef.current.focus();
+    this.setState({
+      inputCountryRef: this.inputCountryRef.current.focus(),
+    })
   }
   handleInputMobilenoFocus(e) {
-    this.inputMobilenoRef.current.focus();
+    this.setState({
+      inputMobilenoRef: this.inputMobilenoRef.current.focus(),
+    })
   }
   handleInputCompanyFocus(e) {
-    this.inputCompanyRef.current.focus();
+    this.setState({
+      inputCompanyRef: this.inputCompanyRef.current.focus(),
+    })
   }
   handleInputInquiryFocus(e) {
-    this.inputInquiryRef.current.focus();
+    this.setState({
+      inputInquiryRef: this.inputInquiryRef.current.focus(),
+    })
   }
   handleButtonClick = (event) => {};
 
@@ -99,16 +118,19 @@ class GoogleFormSend extends Component {
     if (!fields["name"]) {
       formIsValid = false;
       errors["name"] = "*Please enter your name.";
+      this.handleInputNameFocus();
     }
     if (typeof fields["name"] !== "undefined") {
       if (!fields["name"].match(/^[a-zA-Z]*$/)) {
         formIsValid = false;
         errors["name"] = "*Please enter alphabet characters only.";
+        this.handleInputNameFocus();
       }
     }
     if (!fields["emailid"]) {
       formIsValid = false;
       errors["emailid"] = "*Please enter your email-ID.";
+      this.handleInputEmailFocus();
     }
     if (typeof fields["emailid"] !== "undefined") {
       var pattern = new RegExp(
@@ -117,30 +139,36 @@ class GoogleFormSend extends Component {
       if (!pattern.test(fields["emailid"])) {
         formIsValid = false;
         errors["emailid"] = "*Please enter valid email-ID.";
+        this.inputEmailRef();
       }
     }
     if (!fields["country"]) {
       formIsValid = false;
       errors["country"] = "*Please enter your country.";
+      this.handleInputCountryFocus();
     }
     if (!fields["mobileno"]) {
       formIsValid = false;
       errors["mobileno"] = "*Please enter your mobile no.";
+      this.handleInputMobilenoFocus();
     }
     if (typeof fields["mobileno"] !== "undefined") {
       if (!fields["mobileno"].match(/^[0-9]/)) {
         formIsValid = false;
         errors["mobileno"] = "*Please enter valid mobile no.";
+        this.handleInputMobilenoFocus();
       }
     }
     if (!fields["company"]) {
       formIsValid = false;
       errors["company"] = "*Please enter your company.";
+      this.handleInputCompanyFocus();
     }
 
     if (!fields["inquiry"]) {
       formIsValid = false;
       errors["inquiry"] = "*Please enter your inquiry.";
+      this.handleInputInquiryFocus();
     }
     this.setState({
       errors: errors,
