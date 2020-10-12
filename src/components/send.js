@@ -23,16 +23,16 @@ class GoogleFormSend extends Component {
       },
       errors: {},
     };
-
-    this.inputNameRef = React.createRef();
-    this.inputEmailRef = React.createRef();
-    this.inputCountryRef = React.createRef();
-    this.inputMobilenoRef = React.createRef();
-    this.inputCompanyRef = React.createRef();
-    this.inputInquiryRef = React.createRef();
     this.handleChange = this.handleChange.bind(this);
     this.submituserInquiryForm = this.submituserInquiryForm.bind(this);
   }
+    inputNameRef = React.createRef();
+    inputEmailRef = React.createRef();
+    inputCountryRef = React.createRef();
+    inputMobilenoRef = React.createRef();
+    inputCompanyRef = React.createRef();
+    inputInquiryRef = React.createRef();
+  
 
   handleInputNameFocus(e) {
       this.inputNameRef= this.inputNameRef.current.focus();
