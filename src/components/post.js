@@ -19,7 +19,7 @@ class Post extends Component {
         <div className="container">
           <div className="row welcome padding text-center">
             <div className="col-md-12">
-              <h1 className="display-4">Updates</h1>
+              <h1 className="display-6 text-center">Updates</h1>
             </div>
             <hr />
           </div>

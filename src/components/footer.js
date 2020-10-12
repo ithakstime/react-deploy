@@ -8,7 +8,7 @@ class Footer extends Component {
           <div className="container-fluid">
             <div className="row text-center">
               <div className="col-xs-12 col-sm-6 col-md-4">
-                &copy;2020 HAKS Internationl Lancing
+                &copy;2020 HAKS International Lancing
               </div>
               <div className="col-xs-12 col-sm-6 col-md-4">
                 <a

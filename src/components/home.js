@@ -8,6 +8,9 @@ import fuel from "../img/fuel.webp";
 import metals from "../img/metals.webp";
 import trade from "../img/trade.webp";
 import Footer from "./footer"
+import { Link } from "react-router-dom";
+
+
 import Draw from "./drawer";
 
 class Home extends Component {
@@ -44,14 +47,16 @@ class Home extends Component {
               </h1>
               <p className="lead mx-auto">Time Waits for none!</p>
               <p>
+              <Link to="/send">
                 <a
-                  href="https://ithakstime.github.io/react-deploy/#/contact"
+                  href="/send"
                   type="button"
                   className="btn btn-dark"
                   aria-hidden="true"
                 >
                   CONTACT
-                </a>
+                </a></Link>
+                
               </p>
               <div className="container wrap">
                 <a

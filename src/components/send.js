@@ -190,7 +190,7 @@ class GoogleFormSend extends Component {
         <div className="container">
           <div className="row welcome text-center">
             <div className="col-md-12">
-              <h1 className="display-4">Contact</h1>
+              <h1 className="display-6 text-center">Contact</h1>
             </div>
             <hr />
           </div>

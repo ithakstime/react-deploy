@@ -238,7 +238,7 @@ hr.light-100 {
   }
 }
 @media (max-width: 576px) {
-  nav.mdl-navigation {
+  .mdl-layout__header-row .mdl-navigation {
     display: none;
   }
   .header-img {

@@ -27,15 +27,15 @@ class Products extends Component {
         </div>
         <div className="container padding">
           <div className="row welcome text-center">
-            <div className="col-md-12 category">
-              <h1 className="display-4">Products</h1>
+            <div className="col-md-12 ">
+              <h1 className="display-6 text-center">Products</h1>
             </div>
             <hr />
           </div>
         </div>
         <div className="container ">
           <div className="row text-center">
-            <div className="col-12 title">
+            <div className="col-12">
               <h3>Agro Product</h3>
             </div>
           </div>
