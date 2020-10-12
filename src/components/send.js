@@ -41,34 +41,22 @@ class GoogleFormSend extends Component {
   }
 
   handleInputNameFocus(e) {
-    this.setState({
-      inputNameRef: this.inputNameRef.current.focus(),
-    })
+      this.inputNameRef= this.inputNameRef.current.focus();
   }
   handleInputEmailFocus(e) {
-    this.setState({
-      inputEmailRef: this.inputEmailRef.current.focus(),
-    })
+      this.inputEmailRef= this.inputEmailRef.current.focus();
   }
   handleInputCountryFocus(e) {
-    this.setState({
-      inputCountryRef: this.inputCountryRef.current.focus(),
-    })
+      this.inputCountryRef= this.inputCountryRef.current.focus();
   }
   handleInputMobilenoFocus(e) {
-    this.setState({
-      inputMobilenoRef: this.inputMobilenoRef.current.focus(),
-    })
+      this.inputMobilenoRef= this.inputMobilenoRef.current.focus();
   }
   handleInputCompanyFocus(e) {
-    this.setState({
-      inputCompanyRef: this.inputCompanyRef.current.focus(),
-    })
+      this.inputCompanyRef= this.inputCompanyRef.current.focus();
   }
   handleInputInquiryFocus(e) {
-    this.setState({
-      inputInquiryRef: this.inputInquiryRef.current.focus(),
-    })
+      this.inputInquiryRef= this.inputInquiryRef.current.focus();
   }
   handleButtonClick = (event) => {};
 
