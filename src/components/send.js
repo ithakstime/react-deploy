@@ -118,7 +118,7 @@ class GoogleFormSend extends Component {
       if (!pattern.test(fields["emailid"])) {
         formIsValid = false;
         errors["emailid"] = "*Please enter valid email-ID.";
-        this.inputEmailRef();
+        this.handleInputEmailFocus();
       }
     }
     if (!fields["country"]) {
