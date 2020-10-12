@@ -92,10 +92,8 @@ class GoogleFormSend extends Component {
       form.addField('entry.2068787174',  formData.inquiry);
       form.send();
     } catch{
-      this.validateForm();
-    } finally{
       window.location.reload();
-    }
+    } 
     }
     
   validateForm() {
