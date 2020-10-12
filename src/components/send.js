@@ -33,24 +33,23 @@ class GoogleFormSend extends Component {
     inputCompanyRef = React.createRef();
     inputInquiryRef = React.createRef();
   
-
   handleInputNameFocus(e) {
-      this.inputNameRef= this.inputNameRef.current.focus();
+      this.inputNameRef.current.focus();
   }
   handleInputEmailFocus(e) {
-      this.inputEmailRef= this.inputEmailRef.current.focus();
+      this.inputEmailRef.current.focus();
   }
   handleInputCountryFocus(e) {
-      this.inputCountryRef= this.inputCountryRef.current.focus();
+      this.inputCountryRef.current.focus();
   }
   handleInputMobilenoFocus(e) {
-      this.inputMobilenoRef= this.inputMobilenoRef.current.focus();
+      this.inputMobilenoRef.current.focus();
   }
   handleInputCompanyFocus(e) {
-      this.inputCompanyRef= this.inputCompanyRef.current.focus();
+      this.inputCompanyRef.current.focus();
   }
   handleInputInquiryFocus(e) {
-      this.inputInquiryRef= this.inputInquiryRef.current.focus();
+      this.inputInquiryRef.current.focus();
   }
   handleButtonClick = (event) => {};
 
