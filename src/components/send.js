@@ -20,12 +20,6 @@ class GoogleFormSend extends Component {
         mobileno: "",
         company: "",
         inquiry: "",
-        inputNameRef : React.createRef(),
-        inputEmailRef : React.createRef(),
-        inputCountryRef: React.createRef(),
-        inputMobilenoRef:React.createRef(),
-        inputCompanyRef:React.createRef(),
-        inputInquiryRef:React.createRef(),
       },
       errors: {},
     };
