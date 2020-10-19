@@ -184,6 +184,8 @@ body {
 footer {
   background-color: #222;
   color: white;
+  font-size: 3vh;
+  font-family: "Poppins", "sans-serif";
 }
 hr .light {
   border-top: 1px solid #d5d5d5;
@@ -270,4 +272,7 @@ hr.light-100 {
     color: #d5d5d5;
     padding: 0px 5px;
   }
+}
+[className*="col-"] {
+  padding: 1rem;
 }

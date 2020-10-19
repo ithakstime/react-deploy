@@ -128,35 +128,21 @@ class Home extends Component {
         <div className="container padding">
           <div className="row text-center">
             <div className="col-xs-12 col-sm-6 col-md-4">
+              <h3>Trade</h3>
+              <img
+                src={trade}
+                className="img-responsive"
+                alt="commodity trading"
+                width="100%"
+              />
+            </div>
+            <div className="col-xs-12 col-sm-6 col-md-4">
               <h3>Agro</h3>
-              <img
-                src={agro}
-                className="img-responsive"
-                alt="commodity trading"
-              />
-            </div>
-            <div className="col-xs-12 col-sm-6 col-md-4">
-              <h3>Automotive</h3>
-              <img
-                src={automotive}
-                className="img-responsive"
-                alt="commodity trading"
-              />
-            </div>
-            <div className="col-xs-12 col-sm-6 col-md-4">
-              <h3>Digital Marketing IT</h3>
-              <img
-                src={digi}
-                className="img-responsive"
-                alt="commodity trading"
-              />
-            </div>
-            <div className="col-xs-12 col-sm-6 col-md-4">
-              <h3>Fuel</h3>
               <img
                 src={fuel}
                 className="img-responsive"
                 alt="commodity trading"
+                width="100%"
               />
             </div>
             <div className="col-xs-12 col-sm-6 col-md-4">
@@ -165,14 +151,34 @@ class Home extends Component {
                 src={metals}
                 className="img-responsive"
                 alt="commodity trading"
+                width="100%"
               />
             </div>
             <div className="col-xs-12 col-sm-6 col-md-4">
-              <h3>Trade</h3>
+              <h3>Fuel</h3>
               <img
-                src={trade}
+                src={agro}
                 className="img-responsive"
                 alt="commodity trading"
+                width="100%"
+              />
+            </div>
+            <div className="col-xs-12 col-sm-6 col-md-4">
+              <h3>Automotive</h3>
+              <img
+                src={automotive}
+                className="img-responsive"
+                alt="commodity trading"
+                width="100%"
+              />
+            </div>
+            <div className="col-xs-12 col-sm-6 col-md-4">
+              <h3>Digitalization</h3>
+              <img
+                src={digi}
+                className="img-responsive"
+                alt="commodity trading"
+                width="100%"
               />
             </div>
           </div>
