@@ -11,6 +11,14 @@ body {
   font-family: "Patua", "sans-serif";
 }
 
+.mdl-layout__inner-container .mdl-layout__drawer-button {
+  display: none;
+}
+
+.header-bg {
+  background-color: black;
+}
+
 .header-img {
   background-size: cover;
   background-repeat: no-repeat;
@@ -181,10 +189,13 @@ body {
   margin-top: 0.3rem;
   margin-bottom: 1rem;
 }
+
 footer {
+  height: 12vh;
+  padding-top: 4vh;
   background-color: #222;
   color: white;
-  font-size: 3vh;
+  font-size: 2.5vh;
   font-family: "Poppins", "sans-serif";
 }
 hr .light {
@@ -203,6 +214,9 @@ hr.light-100 {
   margin-top: 0.8rem;
   margin-bottom: 1rem;
 }
+.lead {
+  font-size: 1.5rem;
+}
 
 @media (max-width: 992px) {
   .wrap {
@@ -216,14 +230,24 @@ hr.light-100 {
 }
 @media (max-width: 768px) {
   .header-img {
-    height: 80%;
+    height: 75vh;
     width: 100%;
   }
+  footer {
+    padding-top: 1vh;
+    height: 12vh;
+  }
+  .padding {
+    padding-bottom: 1rem;
+  }
   .display-4 {
-    font-size: 200%;
+    font-size: 5vh;
+  }
+  .img-height {
+    height: 300px;
   }
   .lead {
-    font-size: 1rem;
+    font-size: 1.6rem;
   }
   .wrap {
     font-size: 4vw;
@@ -234,12 +258,16 @@ hr.light-100 {
   #fixed {
     display: none;
   }
+
   footer a {
     color: #d5d5d5;
     padding: 0px 7px;
   }
 }
 @media (max-width: 576px) {
+  .mdl-layout__inner-container .mdl-layout__drawer-button {
+    display: block;
+  }
   .mdl-layout__header-row .mdl-navigation {
     display: none;
   }
@@ -250,9 +278,11 @@ hr.light-100 {
     font-size: 150%;
   }
   .lead {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
-
+  .padding {
+    padding-bottom: 0.8rem;
+  }
   h2 {
     font-size: 20px;
   }

@@ -3,9 +3,9 @@ import React, { Component } from "react";
 class Footer extends Component {
   render() {
     return (
-      <div className="container-fluid">
+
         <footer className="my-auto">
-          <div className="container-fluid">
+          <div className="container-fluid text-center">
             <div className="row text-center">
               <div className="col-xs-12 col-sm-6 col-md-4">
                 &copy;2020 HAKS International Lancing
@@ -18,8 +18,9 @@ class Footer extends Component {
                 >
                   <i
                     className="fa fa-google"
-                    style={{ color: "#de5246" }}
+                    style={{ color: "#de5246" ,fontSize: "30px"}}
                     aria-hidden="true"
+                    
                   ></i>
                 </a>
                 <a
@@ -29,7 +30,7 @@ class Footer extends Component {
                 >
                   <i
                     className="fa fa-facebook-square"
-                    style={{ color: "#4867AA" }}
+                    style={{ color: "#4867AA" ,fontSize: "30px"}}
                     aria-hidden="true"
                   ></i>
                 </a>
@@ -40,7 +41,7 @@ class Footer extends Component {
                 >
                   <i
                     className="fa fa-twitter-square"
-                    style={{ color: "#1DA1F2" }}
+                    style={{ color: "#1DA1F2",fontSize: "30px" }}
                     aria-hidden="true"
                   ></i>
                 </a>
@@ -51,7 +52,7 @@ class Footer extends Component {
                 >
                   <i
                     className="fa fa-linkedin-square"
-                    style={{ color: "#1DA1F2" }}
+                    style={{ color: "#1DA1F2" ,fontSize: "30px"}}
                     aria-hidden="true"
                   ></i>
                 </a>
@@ -62,7 +63,7 @@ class Footer extends Component {
                 >
                   <i
                     className="fa fa-instagram"
-                    style={{ color: "#813db4" }}
+                    style={{ color: "#813db4" ,fontSize: "30px"}}
                     aria-hidden="true"
                   ></i>
                 </a>
@@ -73,7 +74,6 @@ class Footer extends Component {
             </div>
           </div>
         </footer>
-      </div>
     );
   }
 }

@@ -32,13 +32,14 @@ class Home extends Component {
               <p className="lead">
                 Commodities | Consulting | Sales | Marketing
               </p>
+              <hr className="padding"/>
             </div>
           </div>
         </div>
-        <div className="container">
+        <div className="container padding ">
           <div className="row">
             <div className="col-md-6">
-              <img src={time} alt="time is precious" className="img-fluid" />
+              <img src={time} alt="time is precious" className="img-fluid img-height " />
             </div>
             <div className="col-md-6">
               <p className="lead mx-auto">Greetings!</p>
@@ -118,7 +119,7 @@ class Home extends Component {
             </div>
           </div>
         </div>
-        <div className="container padding">
+        <div className="container pt-5">
           <div className="row welcome text-center">
             <div className="col-md-12">
               <h1 className="display-4">Products & Services</h1>
@@ -183,7 +184,7 @@ class Home extends Component {
             </div>
           </div>
         </div>
-        <div className="container-fluid wrapper mb-3">
+        <div className="container-fluid wrapper mb-5 padding">
           <a
             href="http://g.page/haksinterlance"
             rel="noopener noreferrer"
