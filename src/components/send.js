@@ -309,7 +309,8 @@ class GoogleFormSend extends Component {
             </div>
             <div className="col-md-6 pt-4">
               <img src={haks} alt="haks" className="img-fluid" />
-              <div className="col-md-6 wrapper">
+              </div>
+              <div className="container-fluid wrapper padding pt-5">
                 <a
                   href="http://g.page/haksinterlance"
                   rel="noopener noreferrer"
@@ -369,7 +370,6 @@ class GoogleFormSend extends Component {
                     aria-hidden="true"
                   ></i>
                 </a>
-              </div>
             </div>
           </div>
         </div>
