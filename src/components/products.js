@@ -40,7 +40,7 @@ class Products extends Component {
             </div>
           </div>
         </div>
-        <div className="container ">
+        <div className="container">
           <div className="row padding">
             <div className="col-xs-12 col-sm-6 col-md-4">
               <div className="card ">

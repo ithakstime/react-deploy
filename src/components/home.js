@@ -124,7 +124,6 @@ class Home extends Component {
             <div className="col-md-12">
               <h1 className="display-4">Products & Services</h1>
             </div>
-            <hr/>
           </div>
         </div>
         <div className="container padding">
