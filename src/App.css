@@ -10,6 +10,10 @@ body {
   margin: 0px;
   font-family: "Patua", "sans-serif";
 }
+.mdl-navigation .mdl-navigation__link {
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
 
 .mdl-layout__inner-container .mdl-layout__drawer-button {
   display: none;
