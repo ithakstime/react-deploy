@@ -17,10 +17,9 @@ body {
 .mdl-navigation .mdl-navigation__link:focus {
   color: #b4b4b4;
 }
-.mdl-navigation .mdl-navigation__link:active {
+.mdl-navigation .mdl-navigation__link a :active {
   color: #333333;
 }
-
 .mdl-layout__inner-container .mdl-layout__drawer-button {
   display: none;
 }
@@ -117,7 +116,7 @@ body {
   padding: 0;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
+  font-size: 50px;
 }
 .wrapper i {
   padding: 0px 30px;
