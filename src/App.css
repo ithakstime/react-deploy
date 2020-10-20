@@ -14,6 +14,9 @@ body {
   font-size: 20px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+.mdl-navigation .mdl-navigation__link:focus {
+  color: #b4b4b4;
+}
 
 .mdl-layout__inner-container .mdl-layout__drawer-button {
   display: none;
