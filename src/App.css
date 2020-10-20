@@ -278,6 +278,10 @@ hr.light-100 {
   .mdl-layout__header-row .mdl-navigation {
     display: none;
   }
+  footer {
+    padding-top: 1vh;
+    height: 15vh;
+  }
   .header-img {
     height: 70vh;
   }
@@ -297,7 +301,7 @@ hr.light-100 {
     font-size: 3vw;
   }
   .wrapper {
-    font-size: 5vw;
+    font-size: 8vw;
   }
   .wrapper i {
     padding: 0px 15px;
