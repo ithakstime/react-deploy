@@ -128,7 +128,7 @@ class Home extends Component {
         </div>
         <div className="container padding">
           <div className="row text-center">
-            <div className="col-xs-12 col-sm-6 col-md-4">
+            <div className="col-xs-12 col-sm-6 col-md-4 ">
               <h3>Trade</h3>
               <img
                 src={trade}

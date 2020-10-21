@@ -43,7 +43,7 @@ body {
   padding: 0;
   align-items: left;
   justify-content: left;
-  font-size: 1vw;
+  font-size: 30px;
 }
 .wrap i {
   padding: 0px 10px;
@@ -288,10 +288,10 @@ hr.light-100 {
     height: 70vh;
   }
   .display-4 {
-    font-size: 150%;
+    font-size: 2.5rem;
   }
   .lead {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .padding {
     padding-bottom: 0.8rem;
@@ -300,7 +300,7 @@ hr.light-100 {
     font-size: 20px;
   }
   .wrap {
-    font-size: 3vw;
+    font-size: 15px;
   }
   .wrapper {
     font-size: 5vw;
