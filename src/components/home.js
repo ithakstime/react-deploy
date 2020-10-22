@@ -119,14 +119,15 @@ class Home extends Component {
             </div>
           </div>
         </div>
-        <div className="container pt-5">
+        <div className="container mt-5">
           <div className="row welcome text-center">
             <div className="col-md-12">
               <h1 className="display-4 text-center">Products & Services</h1>
             </div>
           </div>
+          <hr/>
         </div>
-        <div className="container padding">
+        <div className="container mt-0">
           <div className="row text-center">
             <div className="col-xs-12 col-sm-6 col-md-4 ">
               <h3>Trade</h3>
@@ -184,7 +185,7 @@ class Home extends Component {
             </div>
           </div>
         </div>
-        <div className="container-fluid wrapper mb-5 padding">
+        <div className="container-fluid wrapper mt-3 mb-5 padding">
           <a
             href="http://g.page/haksinterlance"
             rel="noopener noreferrer"

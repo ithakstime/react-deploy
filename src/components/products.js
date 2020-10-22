@@ -43,7 +43,7 @@ class Products extends Component {
         <div className="container">
           <div className="row padding">
             <div className="col-xs-12 col-sm-6 col-md-4">
-              <div className="card ">
+              <div className="card my-3">
                 <img
                   className="card-img-top"
                   src={rice}
@@ -57,7 +57,7 @@ class Products extends Component {
               </div>
             </div>
             <div className="col-xs-12 col-sm-6 col-md-4">
-              <div className="card">
+              <div className="card my-3">
                 <img
                   className="card-img-top"
                   src={grains}
@@ -71,7 +71,7 @@ class Products extends Component {
               </div>
             </div>
             <div className="col-xs-12 col-sm-6 col-md-4">
-              <div className="card">
+              <div className="card my-3">
                 <img
                   className="card-img-top"
                   src={sugar}
@@ -96,7 +96,7 @@ class Products extends Component {
         <div className="container ">
           <div className="row padding">
             <div className="col-xs-12 col-sm-6 col-md-4">
-              <div className="card ">
+              <div className="card my-3">
                 <img
                   className="card-img-top"
                   src={gold}
@@ -110,7 +110,7 @@ class Products extends Component {
               </div>
             </div>
             <div className="col-xs-12 col-sm-6 col-md-4">
-              <div className="card">
+              <div className="card my-3">
                 <img
                   className="card-img-top"
                   src={aluminium}
@@ -124,7 +124,7 @@ class Products extends Component {
               </div>
             </div>
             <div className="col-xs-12 col-sm-6 col-md-4">
-              <div className="card">
+              <div className="card my-3">
                 <img
                   className="card-img-top"
                   src={constructionsteel}
@@ -149,7 +149,7 @@ class Products extends Component {
         <div className="container ">
           <div className="row padding">
             <div className="col-xs-12 col-sm-6 col-md-4">
-              <div className="card">
+              <div className="card my-3">
                 <img
                   className="card-img-top"
                   src={ford}
@@ -163,7 +163,7 @@ class Products extends Component {
               </div>
             </div>
             <div className="col-xs-12 col-sm-6 col-md-4">
-              <div className="card">
+              <div className="card my-3">
                 <img
                   className="card-img-top"
                   src={honda}
@@ -177,7 +177,7 @@ class Products extends Component {
               </div>
             </div>
             <div className="col-xs-12 col-sm-6 col-md-4">
-              <div className="card">
+              <div className="card my-3">
                 <img
                   className="card-img-top"
                   src={hyundai}
@@ -194,7 +194,7 @@ class Products extends Component {
           <div className="container">
             <div className="row padding justify-content-center">
               <div className="col-xs-12 col-sm-6 col-md-4">
-                <div className="card">
+                <div className="card my-3">
                   <img
                     className="card-img-top"
                     alt="#kia"
