@@ -122,7 +122,7 @@ class Home extends Component {
         <div className="container pt-5">
           <div className="row welcome text-center">
             <div className="col-md-12">
-            <h1 className="display-6 text-center">Products & Services</h1>
+              <h1 className="display-4 text-center">Products & Services</h1>
             </div>
           </div>
         </div>
