@@ -67,7 +67,7 @@ class GoogleFormSend extends Component {
     e.preventDefault();
 
     try{
-      this.validateForm();
+    this.validateForm();
     
       var formData = {
         name: this.state.fields.name,
@@ -84,7 +84,8 @@ class GoogleFormSend extends Component {
       form.addField('entry.1602135448',formData.company);
       form.addField('entry.2068787174',  formData.inquiry);
       form.send();
-    } catch{
+    } 
+    catch{
       window.location.reload();
     } 
     }
