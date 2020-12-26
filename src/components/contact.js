@@ -1,4 +1,4 @@
-import React, { Component,useState } from "react";
+import React, { Component } from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn } from "mdbreact";
 import phone from "../img/phone.jpg";
 import haks from "../img/haks.jpg";
@@ -365,7 +365,7 @@ class Contact extends Component {
             </div>
           </div>
         </div>
-       <Footer/>
+        <Footer />
       </div>
     );
   }

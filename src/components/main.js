@@ -6,6 +6,7 @@ import Contact from "./contact";
 import Home from "./home";
 import Post from "./post";
 import GoogleFormSend from "./send";
+import Gallery from "./Gallery";
 
 const Main = () => (
   <Switch>
@@ -14,6 +15,7 @@ const Main = () => (
     <Route path="/contact" component={Contact} />
     <Route path="/post" component={Post} />
     <Route path="/send" component={GoogleFormSend} />
+    <Route path="/Gallery" component={Gallery} />
   </Switch>
 );
 
